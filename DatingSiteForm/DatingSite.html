@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DatingSite</title>
+    <style>
+        fieldset {
+            border: 2px solid purple;
+            background-color: rosybrown;
+            border-radius: 5px;
+            width: 450px;
+        }
+        legend {
+            background-color: royalblue;
+            border-radius: 5px;
+            color: rosybrown;
+        }
+        div:hover{
+            color:saddlebrown;
+        }
+        .range-caption{
+            background-color: royalblue;
+            border-radius: 5px;
+            color: rosybrown;
+        }
+        .image-preview {
+            width: 300px;
+            min-height: 100px;
+            border: 2px solid plum;
+            margin: 15px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font: bold;
+            color: powderblue;
+        }
+        .image-preview__image {
+            display: none;
+            width: 100%;
+        }
+        .submit-css{
+            background-color: royalblue;
+            border-radius: 5px;
+            color: rosybrown;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter Details For Our Dating Website</h1>
+    <form action="https://learn.nucamp.co/show_everything.php" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Your Face</legend>
+            <div>
+                <!-- JS to preview image found at https://www.youtube.com/watch?time_continue=746&v=VElnT8EoEEM&feature=emb_title -->
+                Preview Your Image: 
+                <input type="file" id="image" name="image"> 
+                <div class="image-preview" id="imagepreview">
+                    <img src="" alt="Image Preview" class="image-preview__image">
+                    <span class="image-preview__default-text">Image Preview</span>
+                </div>
+                <script>
+                    const image = document.getElementById("image");
+                    const previewContainer = document.getElementById("imagepreview");
+                    const previewImage = previewContainer.querySelector(".image-preview__image");
+                    const previewDefault = previewContainer.querySelector(".image-preview__default-text");
+
+                    image.addEventListener("change", function(){
+                        const file = this.files[0];
+
+                        if (file){
+                            const reader = new FileReader();
+
+                            previewDefault.style.display = "none";
+                            previewImage.style.display = "block";
+                            
+                            reader.addEventListener("load", function(){
+                                console.log(this)
+                                previewImage.setAttribute("src", this.result)
+                            });
+
+                            reader.readAsDataURL(file);
+                        }
+                    });
+                </script>
+            </div>
+        </fieldset><br>
+        <fieldset>
+            <legend>Your Details</legend>
+            <div>
+                <label for="name">Name:</label><input type="text" id="name" placeholder="Your Full Name" required/>
+            </div>
+            <div>
+                Gender:
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+            </div>
+            <div>
+                <label for="age">Age:</label><input type="text" id="age" name="age" placeholder="Age" />
+            </div>
+            <div>
+                <label for="birthdate">Date of Birth: </label> <input type="text" id="birthdate" name="birthdate" placeholder="dd/mm/yyyy" />
+            </div>
+            <div>
+                <label for="favoritecolor">Favorite Color: </label><input type="color" id="color" name="color">
+            </div>
+            <div>
+                <label for="country">Choose Your Country: </label>
+                <select id="country" name="country">
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+        <!--    <div>
+                <label for="salary">Salary: </label>
+                <span class="range-caption">Poor</span>
+                <input type="range" id="salary" name="salary" min="0" max="100" value="50" />
+                <span class="range-caption">Rich</span>
+            </div>                                                                                          Table version looks better-->
+            <div>
+                <label for="salary2">Salary:</label>
+                <table class="range-caption">
+                    <tr>
+                        <th>Poor</th>
+                        <th><input type="range" id="salary" name="salary" min="0" max="100" value="50" /></th>
+                        <th>Rich</th>
+                    </tr>
+                </table>
+            </div>
+        </fieldset><br>
+        <fieldset>
+            <legend>Your Contact Info</legend>
+            <div>
+                <label for="email">Email: </label><input type="email" id="email" placeholder="Email Address" required/>
+            </div>
+            <div>
+                <label for="phone">Phone: </label><input type="phone" id="phone" placeholder="XXX-XXX-XXXX" required/>
+            </div>
+            <div>
+                <label for="address">Address: </label><input type="address" id="address" placeholder="Your Address" required/>
+            </div>
+            <div>
+                Contact Method(s): 
+                <input type="checkbox" name="email" value="email" /> Email
+                <input type="checkbox" name="phone" value="phone" /> Phone
+            </div>
+        </fieldset>
+        <div><br>
+            <input class="submit-css" type="submit">
+        </div>
+    </form>
+</body>
+</html>
