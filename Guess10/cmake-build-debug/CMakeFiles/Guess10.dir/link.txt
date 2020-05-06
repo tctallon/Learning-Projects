@@ -1,0 +1,3 @@
+"C:\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\Guess10.dir/objects.a
+D:\MinGW\bin\ar.exe cr CMakeFiles\Guess10.dir/objects.a @CMakeFiles\Guess10.dir\objects1.rsp
+D:\MinGW\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\Guess10.dir/objects.a -Wl,--no-whole-archive  -o Guess10.exe -Wl,--out-implib,libGuess10.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Guess10.dir\linklibs.rsp
