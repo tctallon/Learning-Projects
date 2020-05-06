@@ -1,0 +1,3 @@
+C:/Users/Tallon/CLionProjects/PowerLight/cmake-build-debug/CMakeFiles/PowerLight.dir
+C:/Users/Tallon/CLionProjects/PowerLight/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Tallon/CLionProjects/PowerLight/cmake-build-debug/CMakeFiles/rebuild_cache.dir
