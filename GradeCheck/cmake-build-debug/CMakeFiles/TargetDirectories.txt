@@ -1,0 +1,3 @@
+C:/Users/Tallon/CLionProjects/GradeCheck/cmake-build-debug/CMakeFiles/GradeCheck.dir
+C:/Users/Tallon/CLionProjects/GradeCheck/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Tallon/CLionProjects/GradeCheck/cmake-build-debug/CMakeFiles/rebuild_cache.dir

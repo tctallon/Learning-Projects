@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Tallon/CLionProjects/GradeCheck/main.cpp
+iostream
+-
+cmath
+-
+vector
+-
+bits/stdc++.h
+-
+algorithm
+-
+
