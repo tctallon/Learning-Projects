@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Tallon/CLionProjects/Assignment12_TallonClark/main.cpp
+iostream
+-
+cstdlib
+-
+iomanip
+-
+string
+-
+limits
+-
+vector
+-
+sstream
+-
+numeric
+-
+cmath
+-
+fstream
+-
+algorithm
+-
+bits/stdc++.h
+-
+

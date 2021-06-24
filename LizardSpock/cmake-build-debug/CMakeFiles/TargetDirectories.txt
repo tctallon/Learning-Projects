@@ -1,0 +1,3 @@
+C:/Users/Tallon/CLionProjects/Assignment12_TallonClark/cmake-build-debug/CMakeFiles/Assignment12_TallonClark.dir
+C:/Users/Tallon/CLionProjects/Assignment12_TallonClark/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Tallon/CLionProjects/Assignment12_TallonClark/cmake-build-debug/CMakeFiles/rebuild_cache.dir
